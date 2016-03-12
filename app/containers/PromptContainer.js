@@ -15,8 +15,9 @@ var PromptContainer = React.createClass({
             <div className="form-group col-sm-4 col-sm-offset-4">
               <button
                 className="btn btn-block btn-success"
-                type="submit" />
-              Continue
+                type="submit">
+                Continue
+              </button>
             </div>
           </form>
        </div>
