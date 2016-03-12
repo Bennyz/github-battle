@@ -13,7 +13,7 @@ var PromptContainer = React.createClass({
     }
   },
 
-  hanldleUpdateUser: function(e) {
+  handleUpdateUser: function(e) {
       this.setState({
         username: e.target.value
       });
@@ -37,7 +37,7 @@ var PromptContainer = React.createClass({
       });
     } else {
       console.log(this.context);
-      this.context.router.push('/plyerTwo/' + this.state.username);
+      this.context.router.push('/playerTwo/' + this.state.username);
     }
   },
 
