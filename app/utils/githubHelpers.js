@@ -17,6 +17,8 @@ var helpers = {
         console.log(user.data);
         return user.data;
       });
+    }).catch(function(error) {
+      console.warn('Error in getPlayersInfo', error);
     });
   }
 };
