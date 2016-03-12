@@ -1,7 +1,9 @@
 var React = require('react');
 var styles = require('../styles');
 var PropTypes = React.PropTypes;
-var Link = require('react-router').Link;  
+var Link = require('react-router').Link;
+var UserDetails = require('./UserDetails');
+var UserDetailsWrapper = require('./UserDetailsWrapper');
 
 function puke (object) {
   return <pre>{JSON.stringify(object, null, ' ')}</pre>
@@ -13,9 +15,12 @@ function ConfirmBattle(props) {
   : <div className="jumbotron col-sm-12 text-center" style={styles.transparentBg}>
     <h1>Confirm Players</h1>
     <div className='col-sm-8 col-sm-offset-2'>
-      player 1: {puke(props.playersInfo[0])}
-
-      player 2: {puke(props.playersInfo[1])}
+      <UserDetailsWrapper header='player 1'>
+        <UserDetails info={props.playersInfo[0]} />
+      </UserDetailsWrapper>
+      <UserDetailsWrapper header='player 2'>
+        <UserDetails info={props.playersInfo[0]} />
+      </UserDetailsWrapper>
     </div>
     <div className='col-sm-8 col-sm-offset-2'>
       <div className='col-sm-12' style={styles.space}>
