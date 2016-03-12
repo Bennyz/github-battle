@@ -10,4 +10,9 @@ function ConfirmBattle(props) {
     : <p> Confirm Battle: {puke(props)} </p>;
 }
 
+ConfirmBattle.propTypes = {
+  isLoading: PropTypes.bool.isRequired,
+  playersInfo: PropTypes.array.isRequired
+};
+
 module.exports = ConfirmBattle;
