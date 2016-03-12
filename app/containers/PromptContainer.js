@@ -41,6 +41,15 @@ var PromptContainer = React.createClass({
     }
   },
 
+  handleInitiateBattle: function() {
+    this.context.rouer.push({
+      pathname: '/results',
+      state: {
+        playersInfo: this.state.playersInfo
+      }
+    });
+  },
+
   render: function() {
     return (
       <Prompt
