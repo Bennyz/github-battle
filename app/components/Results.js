@@ -25,6 +25,7 @@ function Tie (props) {
     </MainContainer>
   )
 }
+
 function Results (props) {
   if (props.isLoading === true) {
     return <p> Loading </p>
