@@ -12,7 +12,7 @@ function puke (object) {
 
 function ConfirmBattle(props) {
   return props.isLoading === true
-  ? <Loading speed={100} text='baby'/>
+  ? <Loading speed={300} text='john heretic scum'/>
   : <div className="jumbotron col-sm-12 text-center" style={styles.transparentBg}>
     <h1>Confirm Players</h1>
     <div className='col-sm-8 col-sm-offset-2'>
@@ -20,7 +20,7 @@ function ConfirmBattle(props) {
         <UserDetails info={props.playersInfo[0]} />
       </UserDetailsWrapper>
       <UserDetailsWrapper header='player 2'>
-        <UserDetails info={props.playersInfo[0]} />
+        <UserDetails info={props.playersInfo[1]} />
       </UserDetailsWrapper>
     </div>
     <div className='col-sm-8 col-sm-offset-2'>
