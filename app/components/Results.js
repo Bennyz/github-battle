@@ -8,7 +8,7 @@ var UserDetailsWrapper = require('./UserDetailsWrapper');
 var MainContainer = require('./MainContainer');
 var Loading = require('./Loading');
 
-function StartOver () {
+function StartOver() {
   return (
     <div className='col-sm-12' style={styles.space}>
       <Link to='/playerOne'>
@@ -18,7 +18,7 @@ function StartOver () {
   )
 }
 
-function Tie (props) {
+function Tie(props) {
   return (
     <MainContainer>
       <h1>Its a Tie!</h1>
