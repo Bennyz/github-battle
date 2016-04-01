@@ -13,7 +13,8 @@ function getRepos(username) {
 }
 
 function getTotalStars(repos) {
-  repos.data.reduce(function(prev, curr) {
+  console.log(repos);
+  return repos.data.reduce(function(prev, curr) {
     return prev + curr.stargazers_count;
   }, 0);
 }
@@ -23,7 +24,7 @@ function getPlayersData(player) {
     .then(getTotalStars)
     .then(function(totalStars) {
       return {
-        folowes: player.followes,
+        followers: player.followers,
         totalStars: totalStars
       }
     })

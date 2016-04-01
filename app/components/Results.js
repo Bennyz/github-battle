@@ -27,7 +27,7 @@ function Tie(props) {
   )
 }
 
-function Results (props) {
+function Results(props) {
   if (props.isLoading === true) {
     return <Loading />
   }
