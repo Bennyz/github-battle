@@ -1,10 +1,9 @@
-var React = require('react');
-var styles = require('../styles');
-var PropTypes = React.PropTypes;
-var Link = require('react-router').Link;
-var UserDetailsWrapper = require('./UserDetailsWrapper');
-var UserDetails = require('./UserDetails');
-var Loading = require('./Loading');
+import React, { PropTypes } from 'react'
+import styles from '../styles'
+import { Link } from 'react-router'
+import UserDetailsWrapper from './UserDetailsWrapper'
+import UserDetails from './UserDetails'
+import Loading from './Loading'
 
 function puke (object) {
   return <pre>{JSON.stringify(object, null, ' ')}</pre>
@@ -42,4 +41,4 @@ ConfirmBattle.propTypes = {
   onInitiateBattle: PropTypes.func.isRequired
 };
 
-module.exports = ConfirmBattle;
+export default ConfirmBattle
