@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import Results from '../components/Results'
-import githubHelpers from '../utils/githubHelpers'
+import { battle } from '../utils/githubHelpers'
 
 const ResultsContainer = React.createClass({
   getInitialState: function() {
@@ -10,7 +10,7 @@ const ResultsContainer = React.createClass({
     }
   },
   componentDidMount: function() {
-    githubHelpers.battle(this.props.location.state.playersInfo)
+    battle(this.props.location.state.playersInfo)
       .then(function(scores) {
         this.setState({
           scores: scores,
