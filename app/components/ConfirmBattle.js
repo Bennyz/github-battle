@@ -4,6 +4,7 @@ import { Link } from 'react-router'
 import UserDetailsWrapper from './UserDetailsWrapper'
 import UserDetails from './UserDetails'
 import Loading from './Loading'
+import MainContainer from './MainConatiner'
 
 function puke (object) {
   return <pre>{JSON.stringify(object, null, ' ')}</pre>
@@ -12,7 +13,7 @@ function puke (object) {
 function ConfirmBattle(props) {
   return props.isLoading === true
   ? <Loading speed={300} text='john heretic scum'/>
-  : <div className="jumbotron col-sm-12 text-center" style={styles.transparentBg}>
+  : <MainContainer> 
     <h1>Confirm Players</h1>
     <div className='col-sm-8 col-sm-offset-2'>
       <UserDetailsWrapper header='player 1'>
@@ -32,7 +33,7 @@ function ConfirmBattle(props) {
         </Link>
       </div>
     </div>
-  </div>
+  </MainContainer>
 }
 
 ConfirmBattle.propTypes = {
