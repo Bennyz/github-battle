@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 import UserDetailsWrapper from './UserDetailsWrapper'
 import UserDetails from './UserDetails'
 import Loading from './Loading'
-import MainContainer from './MainConatiner'
+import MainContainer from './MainContainer'
 
 function puke (object) {
   return <pre>{JSON.stringify(object, null, ' ')}</pre>

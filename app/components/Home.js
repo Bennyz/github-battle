@@ -1,8 +1,8 @@
 import React from 'react'
-import { Link } form 'react-router'
+import { Link } from 'react-router'
 import MainContainer from './MainContainer';
 
-var Home = React.createClass({
+const Home = React.createClass({
   render: function() {
     return (
       <MainContainer>
@@ -16,4 +16,4 @@ var Home = React.createClass({
   }
 });
 
-export defualt Home
+export default Home

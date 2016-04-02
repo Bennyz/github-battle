@@ -1,9 +1,8 @@
-var React = require('react');
-var PropTypes = React.PropTypes;
-var Results = require('../components/Results');
-var githubHelpers = require('../utils/githubHelpers');
+import React, { PropTypes } from 'react'
+import Results from '../components/Results'
+import githubHelpers from '../utils/githubHelpers'
 
-var ResultsContainer = React.createClass({
+const ResultsContainer = React.createClass({
   getInitialState: function() {
     return {
       isLoading: true,
@@ -30,4 +29,4 @@ var ResultsContainer = React.createClass({
 
 });
 
-module.exports = ResultsContainer;
+export default ResultsContainer
