@@ -3,7 +3,7 @@ import '../main.css'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 const Main = React.createClass({
-  render: function() {
+  render() {
       return (
         <div className='main-container'>
           <ReactCSSTransitionGroup
