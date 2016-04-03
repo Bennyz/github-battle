@@ -2,14 +2,14 @@ import axios from 'axios'
 
 const id = "YOUR_CLIENT_ID";
 const sec = "YOUR_SECRET_ID";
-const param = "?client_id=" + id + "&client_scret=" + sec;
+const param = `?client_id=${id}&client_scret=${sec}`
 
-function getUserInfo(username) {
-  return axios.get('http://api.github.com/users/' + username + param);
+function getUserInfo(username = 'bennyz') {
+  return axios.get(`http://api.github.com/users/${username + param}`);
 }
 
 function getRepos(username) {
-  return axios.get('http://api.github.com/users/' + username + '/repos' + param + '&per_page=100');
+  return axios.get(`http://api.github.com/users/${username}/repos${param}&per_page=100`);
 }
 
 function getTotalStars(repos) {
@@ -23,7 +23,7 @@ function getPlayersData(player) {
     .then((totalStars) => (
       {
         followers: player.followers,
-        totalStars: totalStars
+        totalStars
       }
     ))
 }

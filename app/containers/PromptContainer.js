@@ -7,41 +7,42 @@ const PromptContainer = React.createClass({
     router: React.PropTypes.object.isRequired
   },
 
-  getInitialState: function() {
+  getInitialState() {
     return {
       username: ''
     }
   },
 
-  handleUpdateUser: function(e) {
+  handleUpdateUser(e) {
       this.setState({
         username: e.target.value
       });
   },
 
-  handleSubmitUser: function(e) {
+  handleSubmitUser(e) {
     e.preventDefault();
     const { username } = this.state;
     this.setState({
       username: ''
     });
-
-    if (this.props.routeParams.playerOne) {
+    
+    const { playerOne } = this.props.routeParams;
+    if (playerOne) {
       console.log(this.context);
       this.context.router.push({
         pathname: '/battle',
         query: {
-          playerOne: this.props.routeParams.playerOne,
+          playerOne,
           playerTwo: username
         }
       });
     } else {
       console.log(this.context);
-      this.context.router.push('/playerTwo/' + username);
+      this.context.router.push(`/playerTwo/${username}`);
     }
   },
 
-  handleInitiateBattle: function() {
+  handleInitiateBattle() {
     this.context.rouer.push({
       pathname: '/results',
       state: {
@@ -50,7 +51,7 @@ const PromptContainer = React.createClass({
     });
   },
 
-  render: function() {
+  render() {
     return (
       <Prompt
         onSubmitUser={this.handleSubmitUser}
